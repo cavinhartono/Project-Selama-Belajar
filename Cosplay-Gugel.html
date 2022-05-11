@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section .main {
+      width: 500px;
+      margin: 0 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    section .main .searchBx {
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    section .main .searchBx .query {
+      width: 100%;
+      padding: 15px;
+      padding-left: 45px;
+      padding-right: 60px;
+      border-radius: 30px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 16px;
+    }
+
+    section .main .searchBx .icons {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+    } 
+
+    section .main .searchBx .icons img {
+      max-width: 100%;
+    }
+
+    .searchBtn {
+      outline: none;
+      margin: 0 5px;
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      color: #555;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .searchBtn:hover {
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="main">
+      <img src="google.png">
+      <div class="searchBx">
+        <input type="text" name="" class="query" value="">
+        <div class="icons">
+          <div><img src="search.png"></div>
+          <div><img src="mic.png"></div>
+        </div>
+      </div>
+      <div class="button">
+        <button class="searchBtn">Google Search</button>
+      </div>
+    </div>
+  </section>
+  <script>
+    let query = document.querySelector('.query');
+    let searchBtn = document.querySelector('.searchBtn');
+
+    searchBtn.onclick = function() {
+      let url = 'https://www.google.com/search?q=' + query.value;
+      window.open(url,'_self');
+    }
+  </script>
+</body>
+</html>
