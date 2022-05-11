@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: San Francisco;
+      src: url(San_Francisco/otf/SFNSDisplay-Medium.otf);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: San Francisco;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      transition: 0.5s;
+      background-color: white;
+      color: #2b2b31;
+    }
+
+    body.aktif {
+      background-color: #22222B;
+      color: #fff;
+    }
+
+    main h1 {
+      font-size: 1em;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-align: center;
+    }
+
+    main .nightMode {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70px;
+      height: 30px;
+      background-color: whitesmoke;
+      border-radius: 50px;
+      margin: 12px 20px;
+    }
+
+    main .nightMode.aktif {
+      background-color: #2b2b31;
+    }
+
+    main .nightMode span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-color: white;
+      border-radius: 50%;
+      border: 3px solid whitesmoke;
+      transition: 0.3s;
+    }
+
+    main .nightMode.aktif span {
+      left: 50%;
+      background-color: #22222B;
+      border: 3px solid #2b2b31;
+    }
+
+    main .jam {
+      display: flex;
+      margin-top: 15px;
+    }
+
+    main .jam div {
+      position: relative;
+      margin: 0 5px;
+    }
+
+    main .jam div span.aktif {
+      background-color: #2b2b31;
+      color: #fff;
+    }
+
+    main .jam div span {
+      display: block;
+      width: 100px;
+      height: 80px;
+      background-color: whitesmoke;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3em;
+    }
+
+    main .jam div span:nth-child(2) {
+      height: 40px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Jam Digital</h1>
+    <div class="nightMode" onclick="Transisi();">
+      <span></span>
+    </div>
+    <div class="jam">
+      <div><span id="jam">00</span><span>Jam</span></div>
+      <div><span id="menit">00</span><span>Menit</span></div>
+    </div>
+  </main>
+  <script>
+    function Jam() {
+      var jam = document.getElementById('jam');
+      var menit = document.getElementById('menit');
+
+      var j = new Date().getHours();
+      var mnt = new Date().getMinutes();
+
+      jam.innerHTML = j;
+      menit.innerHTML = mnt;
+    }
+
+    var aktifkanJam = setInterval(Jam, 1);
+
+    function Transisi() {
+      var nightMode = document.querySelector('.nightMode');
+      var body = document.querySelector('body');
+      var span = document.querySelector('span');
+      
+      nightMode.classList.toggle('aktif');
+      body.classList.toggle('aktif');
+      span.classList.toggle('aktif');
+    }
+  </script>
+</body>
+</html>
