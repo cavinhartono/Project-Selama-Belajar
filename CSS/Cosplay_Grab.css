@@ -1,0 +1,459 @@
+@font-face {
+  font-family: Poppins;
+  src: url(Font/Sans-Serif/Poppins/Poppins-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(Font/Sans-Serif/Poppins/Poppins-Regular.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(Font/Sans-Serif/Poppins/Poppins-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(Font/Sans-Serif/Poppins/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  position: relative;
+}
+
+header .logo img {
+  max-width: 75px;
+}
+
+header nav {
+  position: relative;
+}
+
+header nav ul {
+  position: relative;
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin-left: 35px;
+  color: #222;
+  transition: 0.5s;
+  opacity: 0.75;
+}
+
+header nav ul li a:hover {
+  opacity: 1;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerBx {
+  position: relative;
+  width: 1200px;
+  height: 550px;
+  color: #fff;
+}
+
+.kontenBx {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kontenBx .maps {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(1) brightness(20%);
+  z-index: -1;
+}
+
+.kontenBx .teksBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kontenBx .teksBx .headerGrabBx h4 {
+  position: relative;
+  width: max-content;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.kontenBx .teksBx .headerGrabBx h1 {
+  margin-top: 15px;
+  font-size: 3em;
+  line-height: 1.3em;
+}
+
+.kontenBx .teksBx .headerGrabBx h4::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 20%;
+  height: 2px;
+  background: #0b8a4d;
+  border-radius: 8px;
+}
+
+.kontenBx .teksBx .headerGrabBx h4::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 42px;
+  width: 20%;
+  height: 2px;
+  background: #10b868;
+  border-radius: 8px;
+}
+
+.kontenBx .teksBx .downloadBx {
+  margin-top: 25px;
+}
+
+.kontenBx .teksBx .downloadBx .teksDownload {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.kontenBx .tujuanBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transform: translateX(100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tujuanBx .bookingBx {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tujuanBx .bookingBx .pilihanKendaraan {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #222;
+}
+
+.tujuanBx .bookingBx .pilihanKendaraan ul {
+  position: relative;
+  display: flex;
+}
+
+.tujuanBx .bookingBx .pilihanKendaraan ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.tujuanBx .bookingBx .pilihanKendaraan ul li a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  color: #222;
+}
+
+.tujuanBx .bookingBx .pilihanKendaraan ul li:nth-child(1) a {
+  margin: 0;
+  display: inline-block;
+  padding: 5px 20px;
+  background: #10b868;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.tujuanBx .bookingBx form {
+  position: relative;
+  padding: 20px;
+}
+
+.tujuanBx .bookingBx form input[type="text"] {
+  border: none;
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  padding-left: 64px;
+  margin-bottom: 15px;
+}
+
+.tujuanBx .bookingBx form input:focus {
+  outline: none;
+}
+
+.tujuanBx .bookingBx form .iconBooking {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 25px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tujuanBx .bookingBx form .iconBooking ion-icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.tujuanBx .bookingBx form .iconBooking ion-icon:nth-child(1) {
+  color: #10b868;
+}
+
+.tujuanBx .bookingBx form .iconBooking ion-icon:nth-child(2) {
+  color: #8b0000;
+}
+
+.tujuanBx .bookingBx form .jadwalBx {
+  position: relative;
+}
+
+.tujuanBx .bookingBx form .jadwalBx .jadwalInput {
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.tujuanBx .bookingBx form .jadwalBx .iconJadwal {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 13px 25px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tujuanBx .bookingBx form .jadwalBx .iconJadwal ion-icon{
+  color: #999;
+}
+
+/* .button-47 {
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  height: 56px;
+  padding: 24px;
+  line-height: 24px;
+  border: 0 solid #E2E8F0;
+  border-radius: 8px;
+  background: #10b868;
+  color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  overflow-wrap: break-word;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: 0.5s;
+} */
+
+.button-48 {
+  text-decoration: none;
+  border-width: 0;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 1.5em 2.2em;
+  border-radius: 10px;
+  background-color: #10b868;
+  color: #fff;
+  appearance: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: 0;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  text-align: center;
+  text-rendering: geometricprecision;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.button-48:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0b8a4d;
+  backface-visibility: hidden;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  animation: opacityFallbackOut .5s step-end forwards;
+}
+
+.button-48:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48:after {
+  background-color: #FFFFFF;
+}
+
+.button-48 span {
+  position: relative;
+  z-index: 1;
+}
+
+.downloadBx {
+  position: relative;
+}
+
+.downloadBx .linkBx {
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+}
+
+.downloadBx .linkBx li {
+  list-style: none;
+}
+
+.downloadBx .linkBx li a .icon ion-icon {
+  max-width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 10px;
+  font-size: 4em;
+  color: #fff;
+}
+
+.downloadBx .linkBx li a .teks span {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.downloadBx .linkBx li a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  background: #10b868;
+  border-radius: 8px;
+  color: #fff;
+  padding: 5px 12px;
+  margin-right: 15px;
+  font-size: 0.6em;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.downloadBx .linkBx li a:hover {
+  background: #0b8a4d;
+}
+
+.manfaatBx {
+  position: absolute;
+  bottom: 0;
+  width: 800px;
+  height: 100px;
+  padding: 50px;
+  background: #10b868;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(50%);
+}
+
+.manfaatBx ul {
+  display: flex;
+  gap: 15px;
+}
+
+.manfaatBx ul li {
+  position: relative;
+  list-style: none;
+  display: flex;
+}
+
+.manfaatBx ul li .icon ion-icon {
+  position: relative;
+  max-width: 65px;
+  height: 65px;
+  line-height: 65px;
+  font-size: 2.5em;
+  margin-right: 15px;
+}
+
+.manfaatBx ul li .teks {
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+}
