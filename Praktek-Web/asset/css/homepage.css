@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --warnaUtama: #1f3389;
+  --hitamJudul: #222;
+  --hitamTeks: rgba(34, 34, 34, 0.75);
+  --hitamBx: rgba(0, 0, 0, 0.1);
+  --putihBx: -6px -6px 45px rgba(255, 255, 255, 1),
+    6px 6px 45px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-size: 18px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+header .logoBx {
+  position: relative;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.5em;
+  background: var(--warnaUtama);
+  color: #fff;
+  width: 100%;
+}
+
+header .nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+  box-shadow: 0px 8px 45px var(--hitamBx);
+}
+
+header .nav li {
+  list-style: none;
+  margin: 0 25px;
+}
+
+.carousel-item {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+
+.visi {
+  padding: 100px;
+}
+
+.visi .kontenBx {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.visi .kontenBx ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  text-align: center;
+}
+
+.visi .kontenBx .header .judul {
+  font-weight: 600;
+}
+
+.visi .kontenBx .header {
+  font-size: 3em;
+  color: var(--warna);
+}
+
+.visi .kontenBx .heading .teks {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: var(--hitamTeks);
+  line-height: 1.5em;
+}
+
+.link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #e8b143;
+  color: #fff;
+}
+
+.link:hover {
+  background: #ffc54d;
+  color: #fff;
+}
+
+.berita {
+  padding: 100px;
+}
+
+.berita .judulHead {
+  position: relative;
+  width: max-content;
+  text-align: center;
+  color: var(--hitamJudul);
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.berita .judulHead::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 125px;
+  height: 5px;
+  background: #e8b143;
+}
+
+.berita .kontenBx {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardBx {
+  position: relative;
+  width: 600px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: var(--putihBx);
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  transition: 0.5s ease-in-out;
+}
+
+.cardBx .teksBx {
+  position: relative;
+  max-width: 400px;
+}
+
+.cardBx .judul {
+  font-weight: 600;
+  font-size: 1.6em;
+}
+
+.cardBx .teks {
+  margin-top: 15px;
+  font-size: 0.9em;
+  text-align: justify;
+  color: var(--hitamTeks);
+}
+
+.cardBx .imgBx {
+  margin-left: 50px;
+  position: relative;
+  height: 200px;
+}
+
+.cardBx .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.berita:hover .kontenBx .cardBx:nth-child(even) {
+  transform: translateX(50%);
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background-color: royalblue;
+}
+
+footer .container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+}
+
+footer .container .sec h2 {
+  position: relative;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+footer .container .sec h2::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: yellow;
+}
+
+footer .container .sec p {
+  color: white;
+}
+
+.sosmed {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  gap: 10px;
+}
+
+.sosmed li {
+  list-style: none;
+}
+
+.sosmed li a {
+  text-decoration: none;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #3e56cb;
+  color: white;
+  border-radius: 4px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.sosmed li a:hover {
+  background-color: #6380fe;
+}
+
+.quicklinks {
+  position: relative;
+}
+
+.quicklinks li {
+  list-style: none;
+}
+
+.quicklinks li a {
+  text-decoration: none;
+  display: inline-block;
+  color: #f7f7f7;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.quicklinks li a:hover {
+  color: yellow;
+}
+
+.contact {
+  position: relative;
+}
+
+.contact li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 16px;
+}
+
+.contact li span:nth-child(1) {
+  color: white;
+  font-size: 20px;
+}
+
+.contact li a {
+  text-decoration: none;
+  color: #f7f7f7;
+  transition: 0.3s;
+}
+
+.contact li a:hover {
+  color: yellow;
+}
+
+.copyright {
+  width: 100%;
+  background-color: #1f3389;
+  padding: 8px 100px;
+  text-align: center;
+  color: white;
+}
