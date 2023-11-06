@@ -1,11 +1,15 @@
 package atm;
 
 import java.util.Scanner;
+import java.util.Locale;
+import java.text.NumberFormat;
 
 class ATM {
     float balance, amount;
     int pin = 2004;
-
+    
+    NumberFormat rupiahFormatter = NumberFormat.getNumberInstance(new Locale("in", "ID"));
+    
     private static Scanner ip = new Scanner(System.in);
 
     public void menu() {
@@ -37,7 +41,7 @@ class ATM {
     }
 
     public void balance() {
-        System.out.println("Total Tunai Rp. " + balance);
+        System.out.println("Total Tunai Anda, Rp. " + rupiahFormatter.format(balance));
         menu();
     }
 
