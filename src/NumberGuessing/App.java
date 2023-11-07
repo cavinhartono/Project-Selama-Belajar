@@ -6,14 +6,14 @@ import java.util.Scanner;
  * NumberGuessing
  */
 class Games {
-  int num = 1 + (int) (10 * Math.random()), changes = 5, i;
+  int num = 1 + (int) (10 * Math.random()), changes = 5;
   
   private static Scanner ip = new Scanner(System.in);
   
   public void mainMenu() {
     System.out.println("Pilih sebuah angka dari 1 - 10 \nBersedia? Mulai...");
     
-    for (i = 0; i <= changes; i++) {
+    for (int i = 0; i <= changes; i++) {
       System.out.print("Tebak angka!!! ");
       int choice = ip.nextInt();
 
