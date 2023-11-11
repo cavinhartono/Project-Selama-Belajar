@@ -200,10 +200,109 @@ int hasil = 29;
 
 Pada kode diatas "=" berfungsi untuk memberikan nilai variabel "hasil". Berikut tabel informasi mengenai assignment operator yang paling sering digunakan.
 
-| Operator | Deskripsi                                                                                                        | Contoh                                             |
-| -------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| =        | Memberikan sebuah nilai (kanan) ke variabel (kiri)                                                               | A = 1 berarti memberikan nilai 1 kepada variabel A |
-| +=       | Menambah nilai dari variabel (kiri) lama dengan nilai (kanan) kemudian menetapkan hasilnya ke variabel (kiri)    | A += 1 berarti A = A + 1                           |
-| -=       | Mengurangi nilai dari variabel (kiri) lama dengan nilai (kanan) kemudian menetapkan hasilnya ke variabel (kiri)  | A -= 1 berarti A = A - 1                           |
-| \*=      | Mengkalikan nilai dari variabel (kiri) lama dengan nilai (kanan) kemudian menetapkan hasilnya ke variabel (kiri) | A \*= 1 berarti A = A \* 1                         |
-| /=       | Membagi nilai dari variabel (kiri) lama dengan nilai (kanan) kemudian menetapkan hasilnya ke variabel (kiri)     | A /= 1 berarti A = A / 1                           |
+<table>
+   <thead>
+      <tr>
+         <th>Operator<th>
+         <th>Deskripsi<th>
+         <th>Contoh<th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>=<td>
+         <td>Memberikan sebuah nilai (kanan) ke variabel (kiri)<td>
+         <td>a = 1<td>
+      </tr>
+      <tr>
+         <td>+=<td>
+         <td>Menambah nilai dari variabel (kiri) lama dengan nilai (kanan) kemudian menetapkan hasilnya ke variabel (kiri)	<td>
+         <td>a += 1, berarti a = a + 1<td>
+      </tr>
+      <tr>
+         <td>-=<td>
+         <td>Mengurang nilai dari variabel (kiri) lama dengan nilai (kanan) kemudian menetapkan hasilnya ke variabel (kiri)	<td>
+         <td>a -= 1, berarti a = a - 1<td>
+      </tr>
+      <tr>
+         <td>*=<td>
+         <td>Mengkalikan nilai dari variabel (kiri) lama dengan nilai (kanan) kemudian menetapkan hasilnya ke variabel (kiri)	<td>
+         <td>a *= 1, berarti a = a * 1<td>
+      </tr>
+      <tr>
+         <td>/=<td>
+         <td>Membagi nilai dari variabel (kiri) lama dengan nilai (kanan) kemudian menetapkan hasilnya ke variabel (kiri)	<td>
+         <td>a /= 1, berarti a = a / 1<td>
+      </tr>
+   </tbody>
+   <tfooter>
+      <tr>
+         <th>Operator<th>
+         <th>Deskripsi<th>
+         <th>Contoh<th>
+      </tr>
+   </tfooter>
+</table>
+
+### Relational Operator
+
+Relational Operator merupakan operator untuk membandingkan antara dua buah data dan menghasilkan true dan false.
+
+<table>
+   <thead>
+      <tr>
+         <th>Operator<th>
+         <th>Deskripsi<th>
+         <th>Contoh<th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>><td>
+         <td>Pengecekan nilai kiri lebih besar dari nilai kanan, jika iya berarti nilai true jika tidak maka false<td>
+         <td>6 > 5<td>
+      </tr>
+      <tr>
+         <td><<td>
+         <td>Pengecekan nilai kiri lebih kecil dari nilai kanan, jika iya berarti nilai true jika tidak maka false<td>
+         <td>5 < 6<td>
+      </tr>
+      <tr>
+         <td>>=<td>
+         <td>Pengecekan nilai kiri lebih besar sama dengan nilai kanan, jika iya berarti nilai true jika tidak maka false<td>
+         <td>5 >= 5<td>
+      </tr>
+      <tr>
+         <td>>=<td>
+         <td>Pengecekan nilai kiri lebih kecil sama dengan nilai kanan, jika iya berarti nilai true jika tidak maka false<td>
+         <td>5 <= 5<td>
+      </tr>
+      <tr>
+         <td>==<td>
+         <td>Pengecekan nilai kiri sama dengan nilai kanan, jika iya berarti nilai true jika tidak maka false<td>
+         <td>5 == 5<td>
+      </tr>
+      <tr>
+         <td>!=<td>
+         <td>Pengecekan nilai kiri tidak sama dengan nilai kanan, jika iya berarti nilai true jika tidak maka false<td>
+         <td>1 =! 5<td>
+      </tr>
+   </tbody>
+   <tfooter>
+      <tr>
+         <th>Operator<th>
+         <th>Deskripsi<th>
+         <th>Contoh<th>
+      </tr>
+   </tfooter>
+</table>
+
+### Logical Operator
+
+Logical Operator menghasilkan nilai true and false.
+
+1. `&&`, menghasilkan nilai true maka semuanya bernilai benar
+2. `||`, jika bernilai salah satu benar, maka menghasilkan nilai true.
+3. `!`, menghasilkan nilai kebalikan dari nilai yang dioperasikan.
+
+---
