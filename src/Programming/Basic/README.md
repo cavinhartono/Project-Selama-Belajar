@@ -18,6 +18,8 @@
 
 ---
 
+<div id="variable">
+
 ### 1. Variabel dan Tipe Data
 
 Variabel adalah tempat untuk menyimpan suatu nilai dengan gaya penamaan `camelCase` yang diawali dengan huruf kecil dan setiap 1 suku kata dipisah dengan huruf kapital. Contohnya, `lastName`.
@@ -67,7 +69,11 @@ Contoh:
    boolean isMarried = false; // Bilangan biner
    ```
 
+</div>
+
 ---
+
+<div id="input_output">
 
 ### 2. Input dan Output
 
@@ -127,8 +133,11 @@ Tinggi Badan    : 174.9
 Status Menikah  : false
 ```
 
+</div>
+
 ---
 
+<div id="operators">
 ### 3. Operator
 
 Operator merupakan suatu simbol yang digunakan untuk aksi terhadap satu atau lebih operator. Contoh, kita ingin melakukan perjumlahan x dan y maka kita menggunakan operator "+".
@@ -305,7 +314,11 @@ Logical Operator menghasilkan nilai true and false.
 2. `||`, jika bernilai salah satu benar, maka menghasilkan nilai `true`.
 3. `!`, menghasilkan nilai kebalikan dari nilai yang dioperasikan.
 
+</div>
+
 ---
+
+<div id="branching">
 
 ### 4. Percabangan
 
@@ -349,7 +362,11 @@ switch (choice) {
 
 Perbedaan `switch()` dengan `if()` yaitu, `switch()` digunakan untuk memiliki satu nilai yang pasti dan `if()` digunakan untuk memberikan syarat pada suatu statement.
 
+</div>
+
 ---
+
+<div id="iteration">
 
 ### 5. Perulangan
 
@@ -416,7 +433,11 @@ Ada 3 macam perintah perulangan, yaitu:
     4
   ```
 
+</div>
+
 ---
+
+<div id="array">
 
 ### 6. Array
 
@@ -450,7 +471,11 @@ String[][] contacts = {
 System.out.println(contacts[1][0]); // Maria, 1627;
 ```
 
+</div>
+
 ---
+
+<div id="function">
 
 ### 7. Fungsi
 
@@ -473,5 +498,7 @@ public class App {
 }
 
 ```
+
+</div>
 
 ---
