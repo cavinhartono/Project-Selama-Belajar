@@ -285,7 +285,7 @@ Relational Operator merupakan operator untuk membandingkan antara dua buah data 
       <tr>
          <td>!=<td>
          <td>Pengecekan nilai kiri tidak sama dengan nilai kanan, jika iya berarti nilai true jika tidak maka false<td>
-         <td>1 =! 5<td>
+         <td>1 != 5<td>
       </tr>
    </tbody>
    <tfooter>
@@ -301,8 +301,177 @@ Relational Operator merupakan operator untuk membandingkan antara dua buah data 
 
 Logical Operator menghasilkan nilai true and false.
 
-1. `&&`, menghasilkan nilai true maka semuanya bernilai benar
-2. `||`, jika bernilai salah satu benar, maka menghasilkan nilai true.
+1. `&&`, menghasilkan nilai `true` maka semuanya bernilai benar
+2. `||`, jika bernilai salah satu benar, maka menghasilkan nilai `true`.
 3. `!`, menghasilkan nilai kebalikan dari nilai yang dioperasikan.
+
+---
+
+### 4. Percabangan
+
+Percabangan digunakan untuk menentukan suatu keputusan atau kondisi tertentu, di dalam sebuah kondisi biasanya terdapat ada operator yang digunakan sebagai syarat untuk memenuhi kondisi tersebut.
+
+Percabangan terdapat 2 macam, yaitu:
+
+- If Else
+
+```java
+int num = 3;
+
+if (num > 0) {
+   System.out.println("Positif");
+} else if (num < 0) {
+   System.out.println("Negatif");
+} else {
+   System.out.println("Nol");
+}
+```
+
+- Switch Case
+
+```java
+int choice = 2;
+
+switch (choice) {
+   case 1:
+      System.out.println("Teh Manis");
+      break;
+
+   case 2:
+      System.out.println("Kopi");
+      break;
+
+   default:
+      System.out.println("Air Putih");
+      break;
+}
+```
+
+Perbedaan `switch()` dengan `if()` yaitu, `switch()` digunakan untuk memiliki satu nilai yang pasti dan `if()` digunakan untuk memberikan syarat pada suatu statement.
+
+---
+
+### 5. Perulangan
+
+Perulangan adalah perintah untuk mengulang satu atau lebih statement tanpa terhenti, selama kondisi terpenuhi.
+
+Ada 3 macam perintah perulangan, yaitu:
+
+- `for`, digunakan untuk menjalankan perintah dengan jumlah perulangan yang telah diketahui.
+
+  ```java
+  for(int i = 0; i < 5; i++) {
+     // int i = 0;, inisialisasi nilai
+     // i < 5, syarat pengulangan
+     // i++, perubahan nilai
+     System.out.println(i);
+  }
+  ```
+
+  ```
+     Output
+     0
+     1
+     2
+     3
+     4
+  ```
+
+- `while`, digunakan untuk mengulang satu atau beberapa perintah hingga syarat yang tertentukan terpenuhi.
+
+  ```java
+  int i = 0; // Inisialisasi nilai
+  while(i < 5) {
+     // i < 5, syarat pengulangan
+     System.out.println(i);
+     i++; // Perubahan nilai
+  }
+  ```
+
+  ```
+     Output
+     0
+     1
+     2
+     3
+     4
+  ```
+
+- `do while()`, digunakan untuk mengulang suatu perintah selama kondisi pada while masih terpenuhi.
+
+  ```java
+  int i = 0; // Inisialisasi nilai
+  do {
+     System.out.println(i);
+     i++; // Perubahan nilai
+  } while (i < 5); // Syarat pengulangan
+  ```
+
+  ```
+    Output
+    0
+    1
+    2
+    3
+    4
+  ```
+
+---
+
+### 6. Array
+
+Array adalah sekumpulan tempat secara berurutan yang digunakan untuk menyimpan data.
+
+```
+tipeData namaArray[] = new tipeData[kapasitas];
+```
+
+Contoh:
+
+```java
+int numbers[] = new int[4];
+
+numbers[0] = 7;
+numbers[1] = 12;
+numbers[2] = 15;
+numbers[3] = 17;
+```
+
+Ada juga Array Multi Dimensi yang merupakan menyimpan data lebih dari satu dimensi.
+
+`tipeData[][] namaArray = new tipeData[kapasitas][kapasitas];`
+
+```java
+String[][] contacts = {
+   {"John", "1627"},
+   {"Maria", "6421"}
+};
+
+System.out.println(contacts[1][0]); // Maria, 1627;
+```
+
+---
+
+### 7. Fungsi
+
+Function adalah blok program yang akan berjalan saat kita panggil. Untuk mendeklarasikan function dengan cara `tipeFungsi tipeData namaFungsi(parameter)`. `tipeFungsi` yang dimaksud adalah instansiasi object yang akan dibahas di Object Oriented Programming.
+
+Contoh:
+
+```java
+
+public class App {
+   // void, merupakan tidak memerlukan nilai balik atau return.
+   public void greeting(String name) {
+      System.out.println("Hello, " + name);
+   }
+
+   public static void main(String[] args) {
+      greeting("John"); // Hello, John
+   }
+
+}
+
+```
 
 ---
