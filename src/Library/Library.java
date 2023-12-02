@@ -1,8 +1,5 @@
 package Library;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Scanner;
 
 class Library {
@@ -48,13 +45,7 @@ class Library {
     } while (choice != 6);
   }
 
-  private static void read() {
-    try {
-      FileReader fileIp = new FileReader("database.txt");
-      BufferedReader bufferIp = new BufferedReader(fileIp);
-    } catch (Exception e) {
-      System.err.println("Database tidak ditemukan. \nSilahkan tambahkan data!");
-      return;
-    }
+  public void read() {
+    
   }
 }
