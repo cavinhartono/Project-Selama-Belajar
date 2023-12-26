@@ -3,34 +3,61 @@ package AgeCalculator;
 import java.util.Scanner;
 
 /**
- * UsingSwitch
+ * Dates
  */
-class UsingArray {
-  public void findAge(int birthDate, String birthMonth, int birthYear, int currentDate, String currentMonth, int currentYear) {
-    int years = currentYear - birthYear, months = getMonth(currentMonth) - getMonth(birthMonth), days = currentDate - birthDate;
+class Dates {
+  public int date, year;
+  public String month;
 
-    if(days < 0) {
-      days += 30;
+  public Dates(int date, String month, int year) {
+    this.date = date;
+    this.month = month;
+    this.year = year;
+  }
+}
+
+class UsingArray {
+  public void findAge(Dates birth, Dates current) {
+    int years = current.year - birth.year, 
+      months = getMonth(current.month) - getMonth(birth.month), // diconvert dari nama bulan ke jumlah hari
+      days = current.date - birth.date;
+
+    if (days < 0) {
+      days += getDays(getMonth(current.month));
       months--;
     }
 
-    if(months < 0) {
+    if (months < 0) {
       months += 12;
       years--;
     }
 
-    System.out.println("\n" + years + " tahun " + months + " bulan " + days + " hari.");
+    String result = (years < 0) // Apakah tahun adalah 0? 
+                      ? months + " bulan " + days + " hari." // true, menampilkan tahun yang sama
+                      : years + " tahun " + months + " bulan " + days + " hari."; // false, menampilkan tahun yang berbeda
+    
+    System.out.println("\n" + result);
   }
 
   public int getMonth(String month) {
-    String[] Months = { "januari", "februari", "maret", "april", "mei", "juni", "juli", "agustus", "september", "oktober", "november", "desember" };
+    String[] Months = { "januari", "februari", "maret", "april", 
+                        "mei", "juni", "juli", "agustus", 
+                        "september", "oktober", "november", "desember" };
 
     for (int i = 0; i < Months.length; i++) {
-      if(Months[i].equalsIgnoreCase(month)) {
-        return i + 1;
+      // Ia akan mengecak "Apakah yang di input ada di bulan-bulan?"
+      if (Months[i].equalsIgnoreCase(month)) {
+        return i;
       }
     }
-    return -1;
+
+    return -1; // Jika nama bulan tidak ditemukan, karena input yang typo
+  }
+
+  public int getDays(int month) {
+    int[] Days = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+    return Days[month];
   }
 }
 
@@ -59,21 +86,17 @@ class AgeCalculator {
 public class App {
   private static Scanner ip = new Scanner(System.in);
   public static void main(String[] args) {
-    // String[] Months = { "januari", "februari", "maret", "april", "mei", "juni", "juli", "agustus", "september", "oktober", "november", "desember" };
-    // int[] Days = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-
     UsingArray obj = new UsingArray();
 
     System.out.print("Tanggal Lahir     : ");
-    int birthDate = ip.nextInt();
-    String birthMonth = ip.next();
-    int birthYear = ip.nextInt();
+    String birth = ip.nextLine();
     
     System.out.print("Tanggal Sekarang  : ");
-    int currentDate = ip.nextInt();
-    String currentMonth = ip.next();
-    int currentYear = ip.nextInt();
+    String current = ip.nextLine();
 
-    obj.findAge(birthDate, birthMonth, birthYear, currentDate, currentMonth, currentYear);
+    obj.findAge(new Dates(Integer.parseInt(birth.split(" ")[0]), birth.split(" ")[1], Integer.parseInt(birth.split(" ")[2])), 
+                new Dates(Integer.parseInt(current.split(" ")[0]), current.split(" ")[1], Integer.parseInt(current.split(" ")[2])));
+    /* obj.findAge(new Dates(birthDate, birthMonth, birthYear), 
+                  new Dates(currentDate, currentMonth, currentYear)); */ 
   }
 }
