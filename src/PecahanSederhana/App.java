@@ -3,9 +3,19 @@ package PecahanSederhana;
 import java.util.Scanner;
 
 class PecahanSederhana {
+  public boolean isMoreNumber(double x, double y) {
+    return x > y ? true : false;
+  }
+
+  public boolean isLessNumber(double x, double y) {
+    return x < y ? true : false;
+  }
+
   public String betweenNumber(double a, double b, double c, double d) {
     double x = a / b, y = c / d;
-    return x < y ? "Lebih kecil" : x > y ? "Lebih besar" : "Sama";
+    return isLessNumber(x, y) ? "Lebih Kecil" 
+      : isMoreNumber(x, y) ? "Lebih Besar" 
+      : "Sama";
   }
 }
 
