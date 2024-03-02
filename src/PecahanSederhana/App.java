@@ -27,8 +27,7 @@ public class App {
 
     for (int i = 0; i < results.length; i++) {
       double a = ip.nextInt(), b = ip.nextInt(), c = ip.nextInt(), d = ip.nextInt();
-      String result = obj.betweenNumber(a, b, c, d);
-      results[i] = result;
+      results[i] = obj.betweenNumber(a, b, c, d);
     }
 
     for (String result : results) {
