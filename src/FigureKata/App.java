@@ -28,8 +28,8 @@ class PrintPattern {
 
 public class App {
   private static Scanner ip = new Scanner(System.in);
-    public static void main(String[] args) {
-      PrintPattern obj = new PrintPattern();
-      obj.main(ip.nextLine(), ip.nextInt());
-    } 
+  public static void main(String[] args) {
+    PrintPattern obj = new PrintPattern();
+    obj.main(ip.nextLine(), ip.nextInt());
+  } 
 }
