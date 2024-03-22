@@ -7,8 +7,8 @@ Code pada `for`:
 ```java
 int[][] x = new int[4][4];
 
-for (int i = 0; i < x.length; i++) {
-  for (int j = 0; j < x.length; j++) {
+for (int i = 0; i < x.length; i++) { // baris
+  for (int j = 0; j < x.length; j++) { // kolom
     // Algoritma pada setiap soal
   }
 }
