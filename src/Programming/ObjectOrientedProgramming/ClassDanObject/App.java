@@ -8,7 +8,7 @@ public class App {
     obj1.setName("Michael Johnson");
     obj1.info();
 
-    System.out.println("NIM   : " + obj2.getNim());
+    System.out.println("NIM   : " + obj2.getNip());
     System.out.println("Prodi : " + obj2.getStudy());
   }
 }
