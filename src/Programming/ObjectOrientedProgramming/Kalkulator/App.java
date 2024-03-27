@@ -32,7 +32,7 @@ public class App {
       switch (choice) {
         case 1:
           calculated = x + y;
-          result = "Hasil: " + calculated;
+          result = "Hasil: " + (calculated % 1 == 0 ? (int) calculated : calculated);
           break;
         case 2:
           calculated = x - y;
@@ -40,7 +40,7 @@ public class App {
           break;
         case 3:
           calculated = x * y;
-          result = "Hasil: " +  calculated;
+          result = "Hasil: " + calculated;
           break;
         case 4:
           if (y != 0) {
