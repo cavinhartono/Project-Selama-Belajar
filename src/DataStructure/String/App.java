@@ -1,4 +1,4 @@
-package String;
+package DataStructure.String;
 
 class KonsepString {
   public String insert(String text, String toInsert, int index) {
@@ -49,13 +49,13 @@ public class App {
                                                           .delete(1, 3);
 
     // Output
-    System.out.println("1. '" + x + "'");
-    System.out.println("2. " + y + " (dihitung tanpa tanda kutip)");
-    System.out.println("3. '" + z + "' (tanpa library)");
+    System.out.println("X = '" + x + "'");
+    System.out.println("Y = " + y + " (dihitung tanpa tanda kutip)");
+    System.out.println("Z = '" + z + "' (tanpa library)");
     System.out.println("   '" + zWithStringBuilder + "' (dengan StringBuilder)");
-    System.out.println("4. '" + c + "'");
+    System.out.println("C = '" + c + "'");
     System.out.println("   '" + cWithStringBuilder + "' (dengan StringBuilder)");
-    System.out.println("5. '" + d + "'");
+    System.out.println("D = '" + d + "'");
     System.out.println("   '" + dWithStringBuilder + "' (dengan StringBuilder)");
   }
 }
