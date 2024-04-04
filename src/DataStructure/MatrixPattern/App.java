@@ -92,6 +92,24 @@ class SoalPattern {
     print(x);
   }
 
+  public void seven(int[][] x) {
+    for (int i = 0; i < x.length; i++) {
+      for (int j = 0; j < x.length; j++) {
+        if (i == j) {
+          x[i][j] = 0;
+        } else {
+          // ada 2 cara:
+          x[i][j] = (Math.max(i, j) + 1);
+          if (i < j) {
+            x[i][j] = j + 1;
+          } else {
+            x[i][j] = i + 1;
+          }
+        }
+      }
+    }
+  }
+
   public void print(int[][] x) {
     for (int i = 0; i < x.length; i++) {
       for (int j = 0; j < x.length; j++) {
@@ -115,5 +133,6 @@ public class App {
     obj.four(x);
     obj.five(x);
     obj.six(x);
+    obj.seven(x);
   }
 }

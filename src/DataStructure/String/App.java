@@ -18,8 +18,7 @@ public class App {
     // 1. x = concat(substr(a, 3, 5), b);
     String aSubString = a.substring(2, 7);
     
-    String x = aSubString + b;
-    System.out.println(x);
+    String x = aSubString.concat(b);
 
     // 2. y = length(x);
     int y = x.length();
@@ -41,9 +40,9 @@ public class App {
     // 5. d = delete(concat(substr(a, 2, 3), c), 2, 2);
     // Tanpa menggunakan Library 
     String dSubstring = a.substring(1, 4);
-    String dConcat = dSubstring + c;
+    String dConcat = dSubstring.concat(c);
     String d = obj.delete(dConcat, 1, 3);
-
+    
     // Menggunakan Library
     StringBuilder dWithStringBuilder = new StringBuilder(a.substring(1, 4) + cWithStringBuilder)
                                                           .delete(1, 3);
