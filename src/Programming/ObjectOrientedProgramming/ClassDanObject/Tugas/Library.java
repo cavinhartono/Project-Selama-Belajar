@@ -1,4 +1,4 @@
-package Programming.ObjectOrientedProgramming.ClassDanObject;
+package Programming.ObjectOrientedProgramming.ClassDanObject.Tugas;
 
 public class Library {
   private String name, location, qty;
@@ -32,6 +32,4 @@ public class Library {
   public void setQty(String qty) {
     this.qty = qty;
   }
-
-  
 }

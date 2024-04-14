@@ -1,4 +1,4 @@
-package Programming.ObjectOrientedProgramming.ClassDanObject;
+package Programming.ObjectOrientedProgramming.ClassDanObject.Tugas;
 
 public class Staff {
   private String nip, name, job;

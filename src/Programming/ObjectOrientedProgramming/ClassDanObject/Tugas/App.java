@@ -1,4 +1,4 @@
-package Programming.ObjectOrientedProgramming.ClassDanObject;
+package Programming.ObjectOrientedProgramming.ClassDanObject.Tugas;
 
 public class App {
   public static void main(String[] args) {
