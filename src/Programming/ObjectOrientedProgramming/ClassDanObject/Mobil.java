@@ -54,3 +54,11 @@ public class Mobil {
     System.out.println();
   }
 }
+
+class Car {
+  String brand, color;
+
+  public void start() {
+    System.out.println("Mobil " + brand + " berwarna " + color + " sedang aktif.");
+  }
+}
