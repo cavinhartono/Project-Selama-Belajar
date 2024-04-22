@@ -15,7 +15,7 @@ public class Mobil {
   public String getColor() {
     return color;
   }
-
+  
   public void setColor(String color) {
     this.color = color;
   }
@@ -52,13 +52,5 @@ public class Mobil {
     System.out.println("Warna: " + getColor());
     System.out.println("Tahun: " + getYear());
     System.out.println();
-  }
-}
-
-class Car {
-  String brand, color;
-
-  public void start() {
-    System.out.println("Mobil " + brand + " berwarna " + color + " sedang aktif.");
   }
 }
