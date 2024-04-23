@@ -1,7 +1,6 @@
 package Searching;
 
 import java.util.Scanner;
-import InsertionSort.*; // local InsertionSort/App.java
 
 class Searching {
   public int linearSearch(int numbers[], int number) {
