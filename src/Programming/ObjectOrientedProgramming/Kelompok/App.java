@@ -24,18 +24,21 @@ public class App {
           System.out.print("Masukan angka: ");
           number = ip.nextInt();
           obj.bilanganPrima(number);
+
           System.out.println();
           break;
         case 2: 
           System.out.print("Masukan angka bulan: ");
           number = ip.nextInt();
           obj.angkaBulan(number);
+
           System.out.println();
           break;
         case 3: 
           System.out.print("Masukan angka calsius: ");
           double calcius = ip.nextDouble();
           obj.convert(calcius);
+
           System.out.println();
           break;
         case 4:
@@ -43,11 +46,14 @@ public class App {
           text = ip.next();
           text += " " + ip.nextLine();
           obj.hurufVokal(text);
+
           System.out.println();
           break;
         case 5:
           System.out.print("Masukan angka deretan: ");
           number = ip.nextInt();
+          
+          System.out.println();
           obj.deretBintang(number);
           System.out.println();
           break;
