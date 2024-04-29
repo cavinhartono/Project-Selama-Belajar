@@ -124,12 +124,15 @@ public class App {
         case 3: 
           double calcius = ip.nextInt();
           obj.convert(calcius);
+          break;
         case 4:
           String text = ip.nextLine();
           obj.hurufVokal(text);
+          break;
         case 5:
           number = ip.nextInt();
           obj.deretBintang(number);
+          break;
         default:
           System.out.println("Tidak ada pilhan");
           break;
