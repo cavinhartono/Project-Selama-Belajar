@@ -67,8 +67,8 @@ class SoalSelection {
     return result;
   }
 
-  public void convert(int number) {
-    double calcius = 10.0, fahrenheit = 0.0;
+  public void convert(double number) {
+    double calcius = number, fahrenheit = 0.0;
     fahrenheit = 32 + (calcius * 1.8);
 
     System.out.println(fahrenheit);
@@ -122,14 +122,14 @@ public class App {
           obj.angkaBulan(number);
           break;
         case 3: 
-          number = ip.nextInt();
-          obj.convert(0);
+          double calcius = ip.nextInt();
+          obj.convert(calcius);
         case 4:
-          number = ip.nextInt();
-          obj.hurufVokal("aku mau makan");
+          String text = ip.nextLine();
+          obj.hurufVokal(text);
         case 5:
           number = ip.nextInt();
-          obj.deretBintang(5);
+          obj.deretBintang(number);
         default:
           System.out.println("Tidak ada pilhan");
           break;
