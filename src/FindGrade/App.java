@@ -1,4 +1,4 @@
-package Programming.FindGrade;
+package FindGrade;
 
 import java.util.Scanner;
 
