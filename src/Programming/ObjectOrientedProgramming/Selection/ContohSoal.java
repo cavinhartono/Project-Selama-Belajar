@@ -82,4 +82,50 @@ public class ContohSoal {
       System.out.println("Nilai tidak valid..");
     }
   }
+
+  public char lima(int score) {
+    if (score >= 90) {
+      return 'A';
+    } else if (score >= 70) {
+      return 'B';
+    } else if (score >= 60) {
+      return 'C';
+    } else if (score >= 50) {
+      return 'D';
+    } else {
+      return 'E';
+    }
+  }
+
+  public void enam(int number) {
+    String result = (number > 0) 
+                      ? "Bilangan positif" 
+                      : (number < 0) 
+                        ? "Bilangan negatif" 
+                        : "Nol";
+
+    System.out.println("Angka yang dimasukan adalah " + result);
+
+    int x = 5, y = 3;
+
+    int sum = x + y, min = x - y, multiple = x * y;
+    double divide = (y != 0) 
+                      ? ((double) x / y) 
+                      : 0;
+
+    System.out.println("Hasil penjumlahan: " + sum);
+    System.out.println("Hasil pengurangan: " + min);
+    System.out.println("Hasil perkalian  : " + multiple);
+    System.out.println("Hasil pembagian  : " + divide);
+  }
+
+  public String enamSwitchCaseDenganTernary(char choice) {
+    return (choice == 'A')
+            ? "Anda memilih pilihan A"
+            : (choice == 'B')
+              ? "Anda memilih pilihan B"
+              : (choice == 'C')
+                ? "Anda memilih pilihan C"
+                : "Pilihan Anda tidak valid.";
+  }
 }
