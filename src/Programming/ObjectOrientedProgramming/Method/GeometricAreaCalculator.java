@@ -9,7 +9,7 @@ public class GeometricAreaCalculator {
     return 0.5 * base * height; // Luas Segitiga
   }
 
-  public double calculate(double side) {
+  public int calculate(int side) {
     return side * side; // Luas Persegi
   }
 }
