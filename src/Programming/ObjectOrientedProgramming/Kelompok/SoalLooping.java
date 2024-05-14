@@ -40,7 +40,7 @@ public class SoalLooping {
   }
 }
 
-class App {
+class Main {
   public static void main(String[] args) {
     SoalLooping obj = new SoalLooping();
     // obj.cekBilanganPositif();

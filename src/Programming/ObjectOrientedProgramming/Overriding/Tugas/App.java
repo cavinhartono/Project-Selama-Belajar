@@ -55,9 +55,9 @@ public class App {
         Circle circle = new Circle(4);
         Rectangle rectangle = new Rectangle(2, 8);
 
-        shape.calculateArea();
-        circle.calculateArea();
-        rectangle.calculateArea();
+        System.out.println("Bangun datar   : " + shape.calculateArea());
+        System.out.println("Luas Lingkaran : " + circle.calculateArea());
+        System.out.println("Luas Segitiga  : " + rectangle.calculateArea());
         break;
       case 4:
         // Soal 4:
