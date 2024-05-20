@@ -1,7 +1,16 @@
 package Programming.ObjectOrientedProgramming.SoalUTS.AngkaBulan;
 
+import java.util.Scanner;
+
 public class App {
-  public void angkaBulan(int number) {
+  private static Scanner ip = new Scanner(System.in);
+
+  public static void main(String[] args) {
+    System.out.print("Masukan bulan (1-12): ");
+    angkaBulan(ip.nextInt());
+  }
+
+  public static void angkaBulan(int number) {
     String result = "";
     switch (number) {
       case 1:
