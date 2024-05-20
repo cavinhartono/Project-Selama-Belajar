@@ -16,15 +16,24 @@ public class App {
 
     switch (choice) {
       case 1:
-        BangunDatar persegi = new Persegi(4);
+        System.out.print("Masukan sisi: ");
+        double sisi = ip.nextDouble();
+
+        BangunDatar persegi = new Persegi(sisi);
         System.out.println(persegi.hitungLuas());
         break;
       case 2:
-        BangunDatar lingkaran = new Lingkaran(6);
+        System.out.print("Masukan jari-jari: ");
+        double jari = ip.nextDouble();
+
+        BangunDatar lingkaran = new Lingkaran(jari);
         System.out.println(lingkaran.hitungLuas());
         break;
       case 3:
-        BangunDatar segitiga = new Segitiga(3, 2);
+        double alas = ip.nextDouble();
+        double tinggi = ip.nextDouble();
+
+        BangunDatar segitiga = new Segitiga(alas, tinggi);
         System.out.println(segitiga.hitungLuas());
         break;
       default:
