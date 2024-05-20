@@ -1,5 +1,7 @@
 package Programming.ObjectOrientedProgramming.SoalUTS.Geometri;
 
+import java.util.Scanner;
+
 public class App {
   private static Scanner ip = new Scanner(System.in);
 
