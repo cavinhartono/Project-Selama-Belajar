@@ -1,4 +1,4 @@
-package Programming.ObjectOrientedProgramming.SoalUTS.Satu;
+package Programming.ObjectOrientedProgramming.SoalUTS.Geometri;
 
 public class Lingkaran extends BangunDatar {
   double jari;
