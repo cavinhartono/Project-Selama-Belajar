@@ -9,7 +9,7 @@ public class App {
       obj.add(letter);
     }
 
-    System.out.println("Binary Tree: ");
+    System.out.println("Pohon Biner: ");
     obj.print(obj.root, "", false);
 
     System.out.println("InOrder: ");

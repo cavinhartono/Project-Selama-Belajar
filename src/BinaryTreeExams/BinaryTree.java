@@ -47,9 +47,9 @@ public class BinaryTree {
 
   public void print(Node node, String prefix, boolean isLeft) {
     if (node != null) {
-      System.out.println(prefix + (isLeft ? "+-- " : " l--") + node.value);
-      print(node.left, prefix + (isLeft ? "|  " : "   "), true);
-      print(node.right, prefix + (isLeft ? "|  " : "   "), false);
+      System.out.println(prefix + (isLeft ? "├── " : "└── ") + node.value);
+      print(node.left, prefix + (isLeft ? "│   " : "    "), true);
+      print(node.right, prefix + (isLeft ? "│   " : "    "), false);
     }
   }
 }
