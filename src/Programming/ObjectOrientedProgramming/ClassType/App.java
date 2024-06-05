@@ -4,14 +4,16 @@ import java.util.Scanner;
 
 public class App {
   private static Scanner ip = new Scanner(System.in);
+
   public static void main(String[] args) {
     TugasRumah obj = new TugasRumah();
-    int[] numbers = { 30, 88, 15, 53 };
+    int[] Numbers = { 30, 88, 15, 53 };
+    char ch = 'A';
 
     obj.classNumber(2, 4);
-    obj.classChar(ip.next().charAt(0));
+    obj.classChar(ch);
     obj.classString("Aku sudah makan");
-    obj.classArray(numbers);
+    obj.classArray(Numbers);
     obj.classDateAndTime();
   }
 }

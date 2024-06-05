@@ -2,7 +2,7 @@ package Programming.ObjectOrientedProgramming.ClassType;
 
 import java.util.Arrays; // nomor 4
 // nomor 5
-import java.util.Date; 
+import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -10,9 +10,7 @@ public class TugasRumah {
   public void classNumber(double x, double y) {
     System.out.println("Penjumlahan: " + (x + y));
     System.out.println("Pengurangan: " + (x - y));
-    System.out.println("Pembagian  : " + (y != 0 
-                                          ? x / y 
-                                          : "Tidak dapat dibagi dengan nol."));
+    System.out.println("Pembagian  : " + (y != 0 ? (x / y) : "Tidak dapat dibagi dengan nol."));
     System.out.println("Perkalian  : " + (x * y));
   }
 
@@ -37,7 +35,7 @@ public class TugasRumah {
       reverse += text.charAt(i);
     }
 
-    if(text.equalsIgnoreCase(reverse)) {
+    if (text.equalsIgnoreCase(reverse)) {
       System.out.println("Kalimat tersebut adalah palindrom");
     } else {
       System.out.println("Kalimat tersebut bukan palindrom");
@@ -53,14 +51,14 @@ public class TugasRumah {
 
   public void classDateAndTime() {
     SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        Date currentDate = new Date();
-        System.out.println("Tanggal dan waktu saat ini: " + dateFormat.format(currentDate));
+    Date currentDate = new Date();
+    System.out.println("Tanggal dan waktu saat ini: " + dateFormat.format(currentDate));
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(currentDate);
-        calendar.add(Calendar.DAY_OF_YEAR, 100);
-        Date futureDate = calendar.getTime();
+    Calendar calendar = Calendar.getInstance();
+    calendar.setTime(currentDate);
+    calendar.add(Calendar.DAY_OF_YEAR, 100);
+    Date futureDate = calendar.getTime();
 
-        System.out.println("Tanggal dan waktu setelah 100 hari: " + dateFormat.format(futureDate));
+    System.out.println("Tanggal dan waktu setelah 100 hari: " + dateFormat.format(futureDate));
   }
 }

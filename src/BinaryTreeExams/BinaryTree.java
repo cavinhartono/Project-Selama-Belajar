@@ -1,24 +1,35 @@
 package BinaryTreeExams;
 
-public class BinaryTree {
-  Node root;
+public class BinaryTree { // untuk membuat pohon biner
+  Node root; // Referensi ke akar pohon biner
 
   public void add(char value) {
     root = addRecursive(root, value);
-  }
+  } /*
+     * Menambahkan nilai ke dalam pohon biner dengan memanggil metode rekursif
+     * 'addRecursive'
+     */
 
   public Node addRecursive(Node current, char value) {
     if (current == null) {
       return new Node(value);
-    }
+    } // Jika current adalah null, buat simpul baru dengan nilai value.
 
     if (value < current.value) {
       current.left = addRecursive(current.left, value);
+      /*
+       * Jika value lebih kecil dari current.value, tambahkan nilai ke anak kiri
+       * secara rekursif.
+       */
     } else if (value > current.value) {
       current.right = addRecursive(current.right, value);
+      /*
+       * Jika value lebih besar dari current.value, tambahkan nilai ke anak kanan
+       * secara rekursif.
+       */
     }
 
-    return current;
+    return current; // Kembalikan `current` untuk mengupdate referensi dalam pohon
   }
 
   public void inOrder(Node node) {
