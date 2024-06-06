@@ -7,7 +7,7 @@ public class BinaryTree { // untuk membuat pohon biner
     root = addRecursive(root, value);
   } /*
      * Menambahkan nilai ke dalam pohon biner dengan memanggil metode rekursif
-     * 'addRecursive'
+     * `addRecursive`
      */
 
   public Node addRecursive(Node current, char value) {
@@ -59,8 +59,8 @@ public class BinaryTree { // untuk membuat pohon biner
   public void print(Node node, String prefix, boolean isLeft) {
     if (node != null) {
       System.out.println(prefix + (isLeft ? "├── " : "└── ") + node.value);
-      print(node.left, prefix + (isLeft ? "│   " : "    "), true);
-      print(node.right, prefix + (isLeft ? "│   " : "    "), false);
+      print(node.left, prefix + (isLeft ? "│ " : " "), true);
+      print(node.right, prefix + (isLeft ? "│ " : " "), false);
     }
   }
 }
