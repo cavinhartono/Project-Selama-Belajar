@@ -51,5 +51,23 @@ public class MergeSort {
       }
       k++;
     }
+
+    while (i < n1) {
+      Arr[k] = Left[i];
+      i++;
+      k++;
+    }
+
+    while (j < n2) {
+      Arr[k] = Right[j];
+      j++;
+      k++;
+    }
+  }
+
+  public void print(String[] Arr) {
+    for (String item : Arr) {
+      System.out.print(item + " ");
+    }
   }
 }

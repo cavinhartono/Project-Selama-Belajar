@@ -4,13 +4,16 @@ public class App {
   public static void main(String[] args) {
     String[] Students = { "Kevin", "Fahrezi", "Fauzi", "Cavin", "Bintang", "Daniel", "Ali", "Fiki" };
 
-    System.out.print("Sebelum pengurutan: ");
-    printArray(Students);
+    MergeSort obj = new MergeSort();
 
-    mergeSort(Students, 0, Students.length - 1);
+    System.out.print("Sebelum pengurutan: ");
+    obj.print(Students);
+
+    // mergeSort(Students, 0, Students.length - 1);
+    obj.sort(Students, 0, Students.length - 1);
 
     System.out.print("Setelah pengurutan: ");
-    printArray(Students);
+    obj.print(Students);
   }
 
   public static void mergeSort(String[] arr, int left, int right) {
