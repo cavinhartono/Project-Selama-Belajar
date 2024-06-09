@@ -5,7 +5,7 @@ public class MergeSort {
     if (left < right) {
       int middle = (left + right) / 2;
       sort(Arr, left, middle);
-      sort(Arr, (middle + 1), right);
+      sort(Arr, middle + 1, right);
       mergeSort(Arr, left, middle, right, 'a');
     }
   }
@@ -22,7 +22,7 @@ public class MergeSort {
     }
 
     for (int j = 0; j < n2; ++j) {
-      Right[j] = Arr[right + j];
+      Right[j] = Arr[middle + 1 + j];
     }
 
     int i = 0, j = 0, k = left;
@@ -69,5 +69,6 @@ public class MergeSort {
     for (String item : Arr) {
       System.out.print(item + " ");
     }
+    System.out.println();
   }
 }
