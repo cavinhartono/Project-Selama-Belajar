@@ -1,5 +1,13 @@
 package DataStructure.Graph.Tugas.CircularList;
 
-public class App {
+class Graph {
+  class Node {
+    Node() {
+
+    }
+  }
+}
+
+class App {
 
 }
