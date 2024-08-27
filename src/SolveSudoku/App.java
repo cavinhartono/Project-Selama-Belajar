@@ -3,28 +3,7 @@ package SolveSudoku;
 class App {
   public static int GRID_SIZE = 9;
 
-  public static boolean isSafe(int Grid[][], int row, int column, int number) {
-    int start = row - row % 3;
-    int end = column - column % 3;
-
-    for (int i = 0; i <= (GRID_SIZE - 1); i++) {
-      if (Grid[start][i] == number || Grid[i][end] == number) {
-        return false;
-      }
-    }
-
-    for (int i = start; i < (start + 3); i++) {
-      for (int j = end; j < (end + 3); j++) {
-        if (Grid[i][j] == number) {
-          return false;
-        }
-      }
-    }
-
-    return true;
-  }
-
-  public static boolean solve(int Grid[][], int row, int column) {
+  public static boolean solve(int[][] Grid, int row, int column) {
     if (row == GRID_SIZE - 1 && column == GRID_SIZE) {
       return true;
     }
@@ -52,6 +31,26 @@ class App {
     return false;
   }
 
+  public static boolean isSafe(int[][] Grid, int row, int column, int number) {
+    int start = row - row % 3, end = column - column % 3;
+
+    for (int i = 0; i <= (GRID_SIZE - 1); i++) {
+      if (Grid[row][i] == number || Grid[i][column] == number) {
+        return false;
+      }
+    }
+
+    for (int i = start; i < (start + 3); i++) {
+      for (int j = end; j < (end + 3); j++) {
+        if (Grid[i][j] == number) {
+          return false;
+        }
+      }
+    }
+
+    return true;
+  }
+
   public static void main(String[] args) {
     int Grid[][] = {
         { 0, 0, 0, /* | */ 7, 3, 0, /* | */ 0, 4, 5 },
@@ -70,13 +69,13 @@ class App {
     if (solve(Grid, 0, 0)) {
       for (int i = 0; i < GRID_SIZE; i++) {
         if (i % 3 == 0 && i != 0) {
-          System.out.println("-----------+----------------+-------------");
+          System.out.println("---------+---------+---------");
         }
         for (int j = 0; j < GRID_SIZE; j++) {
           if (j % 3 == 0 && j != 0) {
             System.out.print("|");
           }
-          System.out.println(" " + Grid[i][j] + " ");
+          System.out.print(" " + Grid[i][j] + " ");
         }
         System.out.println();
       }
