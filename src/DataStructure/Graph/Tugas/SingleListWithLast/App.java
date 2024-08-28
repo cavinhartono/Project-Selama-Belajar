@@ -38,7 +38,7 @@ class Graph {
   public void insertVertex(int v) {
     Node node = new Node(v);
     if (head == null) {
-      head = last = null;
+      head = last = node;
     } else {
       last.next = node;
       last = node;
