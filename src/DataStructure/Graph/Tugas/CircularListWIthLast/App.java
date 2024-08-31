@@ -43,6 +43,49 @@ class Graph {
     }
   }
 
+  public void deleteVertex(int v) {
+    Node temp = head, prev = null;
+
+    if (head == null) {
+      return;
+    }
+
+    if (temp != null && temp.vertex == v) {
+      last.next = head.next;
+      head = head.next;
+    } else {
+      do {
+        prev = temp;
+        temp = temp.next;
+      } while (temp != head && temp.vertex != v);
+
+      if (temp == head) {
+        return;
+      }
+
+      prev.next = temp.next;
+
+      if (temp == last) {
+        last = prev;
+      }
+    }
+
+    for (int neighbor : temp.Neighbors) {
+      Node node = findNode(neighbor);
+      if (node != null) {
+        node.Neighbors.remove((Integer) v);
+      }
+    }
+  }
+
+  public void deleteEdge(int v, int w) {
+    Node vNode = findNode(v), wNode = findNode(w);
+    if (vNode != null && wNode != null) {
+      vNode.Neighbors.remove((Integer) w);
+      wNode.Neighbors.remove((Integer) v);
+    }
+  }
+
   public Node findNode(int v) {
     if (head == null) {
       return null;
@@ -58,17 +101,38 @@ class Graph {
 
     return null;
   }
+
+  public void display() {
+    Node temp = head;
+
+    if (head == null) {
+      return;
+    }
+
+    do {
+      System.out.print("Vertex " + temp.vertex + " is connected to: ");
+      for (int neighbor : temp.Neighbors)
+        System.out.print(neighbor + " ");
+      System.out.println();
+      temp = temp.next;
+    } while (temp != head);
+  }
 }
 
 class App {
   public static void main(String[] args) {
     Graph graph = new Graph();
 
+    System.out.println("\nInserted Vertex");
     graph.insertVertex(1);
     graph.insertVertex(2);
     graph.insertVertex(3);
-
     graph.insertEdge(1, 2);
     graph.insertEdge(2, 3);
+    graph.display();
+
+    System.out.println("\nAfter Delete Vertex");
+    graph.deleteVertex(1);
+    graph.display();
   }
 }
