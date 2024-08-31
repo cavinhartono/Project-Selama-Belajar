@@ -10,17 +10,25 @@ Linked List terdapat istilah, yaitu:
 Jenis-jenis Linked List, adalah:
 
 1. Single
-   Single Linked List merupakan metode yang hanya memiliki satu variabel pointer saja. Di mana pointer tersebut menunjuk satu node selanjutnya.
-   ![Ilustrasi Single Linked List](Image/image.png)
+
+<p> Single Linked List merupakan metode yang hanya memiliki satu variabel pointer saja. Di mana pointer tersebut menunjuk satu node selanjutnya. </p>
+
+![Ilustrasi Single Linked List](Image/image.png)
 
 2. Double
-   Double Linked List merupakan metode yang memiliki dua variabel pointer yaitu, menunjuk pointer selanjutnya dan pointer sebelumnya.
-   ![Ilustrasi Double Linked List](Image/image-1.png)
+
+<p> Double Linked List merupakan metode yang memiliki dua variabel pointer yaitu, menunjuk pointer selanjutnya dan pointer sebelumnya.</p>
+
+![Ilustrasi Double Linked List](Image/image-1.png)
 
 3. Circular
-   Circular Linked List merupakan metode yang Tail (atau Node Terakhir) menunjuk ke Head (Node Pertama).
-   ![Ilustrasi Circular Linked Link](Image/image-2.png)
+
+<p> Circular Linked List merupakan metode yang Tail (atau Node Terakhir) menunjuk ke Head (Node Pertama). </p>
+
+![Ilustrasi Circular Linked Link](Image/image-2.png)
 
 4. Multiple
-   Multiple Linked List merupakan metode yang lebih dari dua variabel pointer.
-   ![Ilustrasi Multiple Linked Link](Image/image-3.png)
+
+<p>Multiple Linked List merupakan metode yang lebih dari dua variabel pointer. </p>
+
+![Ilustrasi Multiple Linked Link](Image/image-3.png)
