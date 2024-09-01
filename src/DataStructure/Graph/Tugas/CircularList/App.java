@@ -46,6 +46,28 @@ class Graph {
     }
   }
 
+  public void deleteVertex(int v) {
+    Node temp = head, prev = null;
+    if (temp != null && temp.vertex == v) {
+      while (temp.next != head) {
+        temp = temp.next;
+      }
+      temp.next = head.next;
+      head = head.next;
+    } else {
+      do {
+        prev = temp;
+        temp = temp.next;
+      } while (temp != head && temp.vertex != v);
+
+      if (temp == head) {
+        return;
+      }
+
+      prev.next = temp.next;
+    }
+  }
+
   public Node findNode(int v) {
     Node temp = head;
     if (temp == null) {

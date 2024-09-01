@@ -48,6 +48,38 @@ class Graph {
     }
   }
 
+  public void deleteVertex(int v) {
+    Node node = findNode(v);
+
+    if (node != null) {
+      for (int neighbor : node.Neighbors) {
+        Node neighborNode = findNode(neighbor);
+        if (neighborNode != null) {
+          neighborNode.Neighbors.remove((Integer) v);
+        }
+      }
+
+      if (node.prev != null) {
+        node.prev.next = node.next;
+      } else {
+        head = node.next;
+      }
+
+      if (node.next != null) {
+        node.next.prev = node.prev;
+      }
+    }
+  }
+
+  public void deleteEdge(int v, int w) {
+    Node vNode = findNode(v), wNode = findNode(w);
+
+    if (vNode != null && wNode != null) {
+      vNode.Neighbors.remove((Integer) w);
+      wNode.Neighbors.remove((Integer) v);
+    }
+  }
+
   private Node findNode(int v) {
     Node temp = head;
     while (temp != null) {

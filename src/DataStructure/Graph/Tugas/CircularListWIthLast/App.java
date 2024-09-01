@@ -123,10 +123,11 @@ class App {
   public static void main(String[] args) {
     Graph graph = new Graph();
 
-    System.out.println("\nInserted Vertex");
+    System.out.println("\n Inserted Vertex");
     graph.insertVertex(1);
     graph.insertVertex(2);
     graph.insertVertex(3);
+
     graph.insertEdge(1, 2);
     graph.insertEdge(2, 3);
     graph.display();
