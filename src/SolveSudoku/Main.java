@@ -4,6 +4,7 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
 class Main {
+  // Inisialisasi Grid atau soal Sudoku
   static int[][] Grid = {
       { 5, 0, 0, /* | */ 6, 0, 0, /* | */ 0, 0, 0 },
       { 8, 0, 0, /* | */ 0, 0, 0, /* | */ 0, 9, 0 },
@@ -18,6 +19,7 @@ class Main {
       { 0, 0, 2, /* | */ 0, 0, 0, /* | */ 4, 0, 0 }
   };
 
+  // Nilai konstant untuk ukuran pada Grid
   public static int GRID_SIZE = 9;
 
   public static void main(String[] args) throws Exception {
@@ -25,6 +27,11 @@ class Main {
     solve();
   }
 
+  /*
+   * Mengecek angka pada baris dan kolom?
+   * True, maka dimasukkan ke posisi yang sesuai
+   * False, maka bilangan tersebut tidak diubah pada baris atau kolom
+   */
   public static boolean isNumber(int x, int y, int number) throws Exception {
     for (int i = 0; i < GRID_SIZE; i++) {
       if (Grid[i][x] == number && i != y) {
@@ -52,6 +59,7 @@ class Main {
     return true;
   }
 
+  // Mencari solusi Sudoku secara rekursi
   public static void solve() throws Exception {
     for (int y = 0; y < GRID_SIZE; y++) {
       for (int x = 0; x < GRID_SIZE; x++) {
@@ -70,6 +78,7 @@ class Main {
     print(Grid);
   }
 
+  // Mencetak hasil secara otomatis
   public static void print(int[][] Grid) throws Exception {
     Robot rb = new Robot();
     for (int[] Row : Grid) {
