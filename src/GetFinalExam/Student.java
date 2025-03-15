@@ -68,7 +68,7 @@ class Student {
         quiz, halfTerm, finalTerm);
   }
 
-  String toProsesString(int no) {
+  String toFinalResultString(int no) {
     return String.format("| %-2d | %-30s | %-21s | %-11.2f | %-5s | %-13s |", no, name, studyProgram, finalResult,
         grade, information);
   }
@@ -77,7 +77,7 @@ class Student {
     return String.format("%s,%s,%.0f,%.0f,%.0f,%.0f,%.0f", nim, name, attendance, project, quiz, halfTerm, finalTerm);
   }
 
-  String toCSVProses() {
+  String toCSVOfFinalResult() {
     return String.format("%s,%s,%s,%.2f,%s,%s", nim, name, studyProgram, finalResult, grade, information);
   }
 }

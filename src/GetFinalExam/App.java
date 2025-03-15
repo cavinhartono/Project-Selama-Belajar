@@ -127,7 +127,7 @@ class App {
     int no = 1;
     for (Student student : ListOfStudents) {
       student.getFinalResult();
-      System.out.println(student.toProsesString(no++));
+      System.out.println(student.toFinalResultString(no++));
     }
     System.out.println(
         "+----+--------------------------------+-----------------------+-------------+-------+---------------+");
@@ -173,7 +173,7 @@ class App {
           case "output":
             fw.write("NIM,Nama,Prodi,Nilai Akhir,Grade,Keterangan\n");
             for (Student student : ListOfStudents) {
-              fw.write(student.toCSVProses() + "\n");
+              fw.write(student.toCSVOfFinalResult() + "\n");
             }
             break;
           default:
